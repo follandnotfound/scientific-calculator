@@ -1,0 +1,251 @@
+﻿:root {
+  color-scheme: dark;
+  font-family: Inter, Arial, sans-serif;
+  background: #06101e;
+  color: #eef2ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 1rem;
+  background: #06101e;
+}
+
+.calculator-shell {
+  width: min(460px, 100%);
+}
+
+.calculator-card {
+  width: 100%;
+  border-radius: 34px;
+  padding: 1.5rem;
+  background: rgba(12, 20, 34, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(18px);
+}
+
+.calculator-header {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.calculator-tag {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  letter-spacing: 0.02em;
+}
+
+.memory-indicator {
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(99, 102, 241, 0.12);
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.4;
+}
+
+.calculator-brand {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f8fafc;
+}
+
+.calculator-tag {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.memory-indicator {
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(99, 102, 241, 0.12);
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.4;
+}
+
+.memory-indicator.active {
+  opacity: 1;
+  background: rgba(99, 102, 241, 0.22);
+}
+
+.display-panel {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.history {
+  min-height: 1.4rem;
+  font-size: 0.88rem;
+  color: #94a3b8;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.display {
+  width: 100%;
+  border: none;
+  border-radius: 24px;
+  padding: 1.4rem 1.2rem;
+  background: linear-gradient(180deg, rgba(148, 163, 184, 0.12), rgba(148, 163, 184, 0.06));
+  color: #eef2ff;
+  font-size: 2rem;
+  text-align: right;
+}
+
+.display:focus {
+  outline: none;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.btn {
+  border: none;
+  border-radius: 20px;
+  min-height: 3.5rem;
+  padding: 1rem 0.7rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.16s ease, background-color 0.16s ease, box-shadow 0.16s ease;
+  color: #eef2ff;
+  background: rgba(148, 163, 184, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.08);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn.operator {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.78), rgba(147, 197, 253, 0.78));
+  box-shadow: 0 16px 28px rgba(96, 165, 250, 0.14);
+}
+
+.btn.equal {
+  background: linear-gradient(135deg, rgba(52, 211, 153, 0.85), rgba(16, 185, 129, 0.85));
+  box-shadow: 0 16px 28px rgba(52, 211, 153, 0.16);
+  font-weight: 700;
+}
+
+.btn.function,
+.btn.constant,
+.btn.bracket,
+.btn.control {
+  background: rgba(148, 163, 184, 0.14);
+}
+
+.btn.digit {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.btn.operator {
+  color: #f8fafc;
+}
+
+.btn.control {
+  color: #f8fafc;
+}
+
+.btn.function,
+.btn.constant,
+.btn.bracket {
+  color: #d1d5db;
+}
+
+@media (max-width: 520px), (max-height: 720px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .calculator-shell {
+    width: 100%;
+  }
+
+  .calculator-card {
+    padding: 0.95rem;
+    max-height: calc(100vh - 1rem);
+  }
+
+  .calculator-header {
+    gap: 0.3rem;
+  }
+
+  .calculator-brand {
+    font-size: 0.95rem;
+  }
+
+  .calculator-tag {
+    font-size: 0.82rem;
+  }
+
+  .display {
+    font-size: 1.55rem;
+    padding: 1rem 0.95rem;
+  }
+
+  .button-grid {
+    gap: 0.65rem;
+  }
+
+  .btn {
+    padding: 0.82rem 0.6rem;
+    font-size: 0.92rem;
+    min-height: 2.9rem;
+  }
+}
+
+@media (max-height: 640px) {
+  .display {
+    font-size: 1.45rem;
+    padding: 0.9rem 0.8rem;
+  }
+
+  .btn {
+    min-height: 2.7rem;
+    padding: 0.75rem 0.55rem;
+    font-size: 0.9rem;
+  }
+
+  .button-grid {
+    gap: 0.55rem;
+  }
+}

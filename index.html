@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="calculator-shell" aria-label="Scientific calculator">
+    <section class="calculator-card">
+      <header class="calculator-header">
+        <div>
+          <p class="calculator-brand">Scientific Calculator</p>
+        </div>
+      </header>
+
+      <div class="display-panel">
+        <div id="history" class="history" aria-live="polite"></div>
+        <input id="display" class="display" type="text" value="0" readonly aria-label="Calculator display" />
+      </div>
+
+      <div class="button-grid">
+        <button type="button" class="btn control" data-action="clear-all">C</button>
+        <button type="button" class="btn control" data-action="clear-entry">CE</button>
+        <button type="button" class="btn control" data-action="backspace">⌫</button>
+        <button type="button" class="btn operator" data-value="÷">÷</button>
+
+        <button type="button" class="btn function" data-action="memory-clear">MC</button>
+        <button type="button" class="btn function" data-action="memory-recall">MR</button>
+        <button type="button" class="btn function" data-action="memory-add">M+</button>
+        <button type="button" class="btn function" data-action="memory-subtract">M-</button>
+
+        <button type="button" class="btn function" data-value="sin(">sin</button>
+        <button type="button" class="btn function" data-value="cos(">cos</button>
+        <button type="button" class="btn function" data-value="tan(">tan</button>
+        <button type="button" class="btn operator" data-value="^">xʸ</button>
+
+        <button type="button" class="btn function" data-value="asin(">asin</button>
+        <button type="button" class="btn function" data-value="acos(">acos</button>
+        <button type="button" class="btn function" data-value="atan(">atan</button>
+        <button type="button" class="btn function" data-value="sqrt(">√</button>
+
+        <button type="button" class="btn function" data-value="ln(">ln</button>
+        <button type="button" class="btn function" data-value="log(">log</button>
+        <button type="button" class="btn function" data-value="exp(">eˣ</button>
+        <button type="button" class="btn operator" data-value="×">×</button>
+
+        <button type="button" class="btn constant" data-value="π">π</button>
+        <button type="button" class="btn constant" data-value="e">e</button>
+        <button type="button" class="btn function" data-action="inverse">1/x</button>
+        <button type="button" class="btn operator" data-value="-">−</button>
+
+        <button type="button" class="btn digit" data-value="7">7</button>
+        <button type="button" class="btn digit" data-value="8">8</button>
+        <button type="button" class="btn digit" data-value="9">9</button>
+        <button type="button" class="btn operator" data-value="+">+</button>
+
+        <button type="button" class="btn digit" data-value="4">4</button>
+        <button type="button" class="btn digit" data-value="5">5</button>
+        <button type="button" class="btn digit" data-value="6">6</button>
+        <button type="button" class="btn bracket" data-value="(">(</button>
+
+        <button type="button" class="btn digit" data-value="1">1</button>
+        <button type="button" class="btn digit" data-value="2">2</button>
+        <button type="button" class="btn digit" data-value="3">3</button>
+        <button type="button" class="btn bracket" data-value=")">)</button>
+
+        <button type="button" class="btn digit" data-value="0">0</button>
+        <button type="button" class="btn digit" data-value=".">.</button>
+        <button type="button" class="btn function" data-action="percent">%</button>
+        <button type="button" class="btn equal" data-action="evaluate">=</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
